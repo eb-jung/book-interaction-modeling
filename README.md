@@ -116,18 +116,15 @@ book-interaction-modeling/
 ## How to Run
 
 ### 1. Install dependencies
-
 ```bash
 pip install -r requirements.txt
 ```
 
-### Data Setup
-
-This project uses a Goodreads-style user–book interaction dataset.
-
+### 2. Data Setup
+This project uses a Goodreads-style user–book interaction dataset.  
 Due to dataset size and licensing constraints, raw data files are not included in this repository.  
 Please place the following files in the `data/` directory:
-
+```
 data/
   train_Interactions.csv.gz
   train_Category.json.gz
@@ -135,12 +132,11 @@ data/
   pairs_Read.csv
   pairs_Category.csv
   pairs_Rating.csv
-
-See `data/README.md` for detailed field descriptions.
 ```
 
-### 3. Generate all predictions
+See `data/README.md` for detailed field descriptions.
 
+### 3. Generate all predictions
 ```bash
 python scripts/generate_predictions.py
 ```
@@ -148,7 +144,6 @@ python scripts/generate_predictions.py
 This trains all three models and writes prediction files to `outputs/`.
 
 ### 4. Run specific tasks
-
 ```bash
 # Read prediction only
 python scripts/generate_predictions.py --tasks read
