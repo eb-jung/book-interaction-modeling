@@ -121,11 +121,13 @@ book-interaction-modeling/
 pip install -r requirements.txt
 ```
 
-### 2. Place data files
+### Data Setup
 
-Put the following files in the `data/` directory (see `data/README.md` for field descriptions):
+This project uses a Goodreads-style user–book interaction dataset.
 
-```
+Due to dataset size and licensing constraints, raw data files are not included in this repository.  
+Please place the following files in the `data/` directory:
+
 data/
   train_Interactions.csv.gz
   train_Category.json.gz
@@ -133,6 +135,8 @@ data/
   pairs_Read.csv
   pairs_Category.csv
   pairs_Rating.csv
+
+See `data/README.md` for detailed field descriptions.
 ```
 
 ### 3. Generate all predictions
